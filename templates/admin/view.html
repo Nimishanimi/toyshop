@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> user details</title>
+</head>
+<body>
+	<div>
+		<table>
+			{% for x in data %}
+			<tr>
+				<th>name</th>
+				<td>{{x.admname}}</td>
+			</tr>
+			<tr>
+				<th>email</th>
+				<td>{{x.admemail}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+</body>
+</html>

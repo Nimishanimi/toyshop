@@ -1,0 +1,55 @@
+{% extends "admin/adminheader&footer.html" %}
+{% block content %}
+   
+   
+ 
+<div class="inner-block">
+    <div class="inbox">
+          <h2>user data</h2>
+         <div class="panel-heading">
+              <h3 class="panel-title"> view details </h3>
+            </div>
+            <table width="100%">
+                    <tr>
+                     <th>slno</th>
+                    <th>name </th>
+                    <th> email </th>
+                    <th> files</th>
+                   <!--  <th> prodescription</th>
+                    <th> image</th> -->
+                </tr>
+                {% for x in user %}
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                           <!--  <td>{{x.id}}</td> -->
+                            <td>{{x.admname}}</td>
+                            <td>{{x.admemail}}</td>
+                            <td> <a href="/pdf/?uid={{x.id}}">file</a></td>
+                          <!--   <td>{{x.prodescription}}</td>
+                            <td><img src="{{x.proimage.url}}" width="100" height="100" style="object-fit: contain;"></td> -->
+
+
+                            <!-- <td><a href="/toysave/?tid={{x.id}}">edit</a></td>
+                            <td><a href="/delete/?uid={{x.id}}">remove</a></td> -->
+                           
+
+                        </tr>
+                                
+                        {% endfor %}   
+                        </table>     
+                
+                <!-- <input type="submit" value="update" class="btn btn-info btn-block"> -->
+              
+              </form>
+              
+            </div>
+          
+        
+          <div class="clearfix"> </div>     
+   </div>
+</div>
+
+
+<!--inner block end here-->
+<!--copy rights start here-->
+{% endblock %}
